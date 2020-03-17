@@ -585,3 +585,26 @@
 	};
 
 })(jQuery);
+
+function copyToClipboard(elementId) {       //email copy function
+	var aux = document.createElement("input");
+
+	aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  
+	// append to body
+	document.body.appendChild(aux);
+  
+	// emphasize selected text
+	aux.select();
+  
+	// make variable that copy text
+	document.execCommand("copy");
+  
+	//return again from body
+	document.body.removeChild(aux);
+  
+}
+
+$(document).ready(function(){  //load feedback.html on modal popup
+	$("#modal_feedback").load("./feedback.html");
+});

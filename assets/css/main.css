@@ -9,7 +9,11 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+	abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, 
+	i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, 
+	article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, 
+	time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -150,6 +154,16 @@
 
 	p {
 		margin: 0 0 2em 0;
+	}
+
+	#entergame {
+		color: black;
+		font-weight: bold;
+	}
+
+	#quest {
+		color : darkgray;
+		font-weight: bold;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -329,6 +343,21 @@
 
 /* Button */
 
+	#emailbut {
+		font-size: 10px;
+		text-align: right;
+		border-radius: 20px;
+	}
+
+	button #envelope {
+		outline: none;
+	}
+
+	.button.big #startbut {
+		color: black;
+	}
+
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -385,6 +414,7 @@
 			padding: 0 2.5em 0 2.875em;
 			height: 3.75em;
 			line-height: 3.75em;
+			
 		}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -1471,6 +1501,8 @@
 		background-color: #ffffff;
 		border-radius: 4px;
 		text-align: center;
+		background-image: url(../../images/enterback.jpg);
+		background-position: 43% 50%;
 	}
 
 		@media screen and (max-width: 736px) {
@@ -1555,3 +1587,73 @@
 				}
 
 		}
+
+/*Modal popup*/
+		*, *::after, *::before {
+			box-sizing: border-box;
+		  }
+		  
+		  .modal {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			transition: 200ms ease-in-out;
+			border: 2px solid black;
+			border-radius: 10px;
+			z-index: 10;
+			background-color: whitesmoke;
+			width: 500px;
+			max-width: 80%;
+		  }
+		  
+		  .modal.active {
+			transform: translate(-50%, -50%) scale(1);
+		  }
+		  
+		  .modal-header {
+			padding: 10px 15px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 2px solid gray;
+		  }
+		  
+		  .modal-header .title {
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			color : #216182;
+		  }
+		  
+		  .modal-header .close-button {
+			cursor: pointer;
+			border: none;
+			outline: none;
+			background: none;
+			font-size: 13px;
+			font-weight: bolder;
+			border-radius: 15px;
+		  }
+		  
+		  .modal-body {
+			padding: 10px 15px;
+			color: rgb(53, 63, 73);
+		  }
+		  
+		  #overlay {
+			position: fixed;
+			opacity: 0;
+			transition: 200ms ease-in-out;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, .5);
+			pointer-events: none;
+		  }
+		  
+		  #overlay.active {
+			opacity: 1;
+			pointer-events: all;
+		  }

@@ -5,117 +5,177 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-	<head>
-		<title>Find Ghost Game</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
 
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="inner">
-					<h1>FindGhost</h1>
-					<p>Game Made By Yeajun Kang, Sihyun Jung</a></p>
-				</div>
-			</header>
+<head>
+	<title>Find Ghost Game</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body>
+	<!-- Header -->
+	<header id="header" class="alt">
+		<div class="inner">
+			<h1>FindGhost</h1>
+			<p>Game Made By Yeajun Kang, Sihyun Jung</a></p>
+		</div>
+	</header>
 
-				<!-- Banner -->
-					<section id="intro" class="main">
-						<span class="icon fa-diamond major"></span>
-						<h2>Enter Game Room</h2>
-						<p>Can You Find Where the Ghost is?</p>
-						<ul class="actions">
-							<li><a href="#" class="button big">Get Started</a></li>
-						</ul>
-					</section>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Items -->
-					<section class="main items">
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/pic01.jpg" alt="" /></a>
-								<h3>About Yeajun Kang</h3>
-							</header>
-							<p>Developer Of Find Ghost Game<br></p>
-							<ul class="actions">
-								<li><a href="./yeajun.html" class="button">More</a></li>
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/pic02.jpg" alt="" /></a>
-								<h3>About Sihyun Jung</h3>
-							</header>
-							<p>Developer of Find Ghost Game<br>Interested in Back-end</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/pic03.jpg" alt="" /></a>
-								<h3>About Game</h3>
-							</header>
-							<p>Informations About Game</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</article>
-						<article class="item">
-							<header>
-								<a href="#"><img src="images/pic04.jpg" alt="" /></a>
-								<h3>Donation</h3>
-							</header>
-							<p>Donation for a cup of Coffee</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</article>
-					</section>
+		<!-- Banner -->
+		<section id="intro" class="main">
+			<span class="icon fa-gamepad major"></span>
+			<h2 id="entergame">Enter Game Room</h2>
+			<p id="quest">Can You Find Where the Ghost is?</p>
+			<ul class="actions">
+				<li><a class="button big" id="">Get Started</a></li>
+			</ul>
+		</section>
 
-				<!-- CTA -->
-					<section id="cta" class="main special">
-						<h2>Find Ghost</h2>
-						<p>Enjoy Your Game, Feel free to give us feedback.</p>
-						<ul class="actions">
-							<li><a href="#" class="button big">Feedback</a></li>
-						</ul>
-					</section>
+		<!-- Items -->
+		<section class="main items">
+			<article class="item">
+				<header>
+					<a><img src="images/pic01.jpg" alt="" /></a>
+					<h3>About Yeajun Kang</h3>
+				</header>
+				<p>Developer Of Find Ghost Game<br></p>
+				<ul class="actions">
+					<li>
+						<button data-modal-target="#modal_kang">More</button>
+						<div class="modal" id="modal_kang">
+							<div class="modal-header">
+								<div class="title">Yeajun Kang's Informations</div>
+								<button data-close-button class="close-button">&times;</button>
+							</div>
+							<div class="modal-body">
+								<ul>
+									<li>Major in <strong>Computer Science</strong></li>
+									<li>Junior in <strong>Hansung University</strong></li>
+									<li>Interested in <strong>C, C++, Python, Java</strong></li>
+									<li>E-mail : <strong><span id="email_k">qsef1202@naver.com</span></strong>
+										<button id="emailbut" onclick="copyToClipboard('email_k')">Copy</button>
+									</li><br>
+									<li><a href="https://github.com/KangSquad" target="_blank">Visit My Github</a></li>
+								</ul>
+							</div>
+						</div>
+						<div id="overlay"></div>
+					</li>
 
-				<!-- Main -->
-				<!--
-					<section id="main" class="main">
-						<header>
-							<h2>Lorem ipsum dolor</h2>
-						</header>
-						<p></p>
-					</section>
-				-->
+				</ul>
+			</article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images:<a href="https://unsplash.com">Unsplash</a>.</p>
-					</footer>
+			<article class="item">
+				<header>
+					<a><img src="images/pic02.jpg" alt="" /></a>
+					<h3>About Sihyun Jung</h3>
+				</header>
+				<p>Developer of Find Ghost Game<br>Interested in Back-end</p>
+				<ul class="actions">
+					<li>
+						<button data-modal-target="#modal_jung">More</button>
+						<div class="modal" id="modal_jung">
+							<div class="modal-header">
+								<div class="title">Sihyun Jung's Informations</div>
+								<button data-close-button class="close-button">&times;</button>
+							</div>
+							<div class="modal-body">
+								<ul>
+									<li>Major in <strong>Computer Science</strong></li>
+									<li>Junior in <strong>Hansung University</strong></li>
+									<li>Interested in <strong>C, C++, Python, Java</strong></li>
+									<li>Email : <strong><span id="email_j">fordevelop@pm.me</span></strong>
+										<button id="emailbut" onclick="copyToClipboard('email_j')">Copy</button>
+									</li><br>
+									<li><a href="https://github.com/Dev-JungSihyun" target="_blank">Visit My Github</a></li>
+								</ul>
+							</div>
+						</div>
+						<div id="overlay"></div>
+					</li>
+				</ul>
+			</article>
+			
+			<article class="item">
+				<header>
+					<a><img src="images/pic03.jpg" alt="" /></a>
+					<h3>About Game</h3>
+				</header>
+				<p>Informations About Game</p>
+				<ul class="actions">
+					<li>
+						<button data-modal-target="#modal_game">More</button>
+						<div class="modal" id="modal_game">
+							<div class="modal-header">
+								<div class="title">About Game</div>
+								<button data-close-button class="close-button">&times;</button>
+							</div>
+							<div class="modal-body">
+								About Game
+							</div>
+						</div>
+						<div id="overlay"></div>
+					</li>
+				</ul>
+			</article>
+			<article class="item">
+				<header>
+					<a><img src="images/pic04.jpg" alt="" /></a>
+					<h3>Donation</h3>
+				</header>
+				<p>Donation for a cup of Coffee</p>
+				<ul class="actions">
+					<li>
+						<button data-modal-target="#modal_don">More</button>
+						<div class="modal" id="modal_don">
+							<div class="modal-header">
+								<div class="title">Donation</div>
+								<button data-close-button class="close-button">&times;</button>
+							</div>
+							<div class="modal-body">
+								Money I love you
+							</div>
+						</div>
+						<div id="overlay"></div>
+					</li>
+				</ul>
+			</article>
+		</section>
 
-			</div>
+		<!-- CTA -->
+		<section id="cta" class="main special">
+			<h2>Find Ghost</h2>
+			<p>Enjoy Your Game, Feel free to give us feedback.</p>
+			<!--load feedback.html-->
+			<ul class="actions">
+				<li>
+					<button data-modal-target="#modal_feedback">Feedback</button>
+					<div class="modal" id="modal_feedback" style="width: 960px; height: 900px;"></div>  
+				</li>
+			</ul>
+		</section>
+		
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://github.com/FindGhost/FindGhost.github.io" class="icon fa-github" target="_blank">
+					<span class="label">Github</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>.
+				Images:<a href="https://unsplash.com">Unsplash</a>.</p>
+		</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/popup.js"></script>
+</body>
+
 </html>
