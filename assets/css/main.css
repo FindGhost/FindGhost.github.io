@@ -1502,7 +1502,9 @@
 		border-radius: 4px;
 		text-align: center;
 		background-image: url(../../images/enterback.jpg);
-		background-position: 43% 50%;
+		background-position: center;
+		background-size: cover;
+
 	}
 
 		@media screen and (max-width: 736px) {
