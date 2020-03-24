@@ -608,3 +608,8 @@ function copyToClipboard(elementId) {       //email copy function
 $(document).ready(function(){  //load feedback.html on modal popup
 	$("#modal_feedback").load("./feedback.html");
 });
+
+
+function channel(){
+    window.open('http://ec2-52-79-56-72.ap-northeast-2.compute.amazonaws.com/',"","channelmode,scrollbars")
+}
