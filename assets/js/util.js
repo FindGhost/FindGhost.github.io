@@ -611,5 +611,5 @@ $(document).ready(function(){  //load feedback.html on modal popup
 
 
 function channel(){
-    window.open('http://ec2-52-79-56-72.ap-northeast-2.compute.amazonaws.com:3000/',"","channelmode,scrollbars")
+    window.open('http://ec2-52-79-56-72.ap-northeast-2.compute.amazonaws.com:3000/',"","channelmode=no, resizable=no").resizeTo(1550, 960);
 }
